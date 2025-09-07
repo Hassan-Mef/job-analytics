@@ -13,7 +13,7 @@ CREATE TABLE IF NOT EXISTS jobs (
     url TEXT UNIQUE,                 -- unique URL for the job post
     created_at TIMESTAMP DEFAULT NOW()
 
-);\
+);
 
 
 
