@@ -8,16 +8,16 @@ CREATE TABLE IF NOT EXISTS jobs (
         CHECK (job_type IN ('Remote' , 'Hybrid' , 'On-site')),
     job_description TEXT,
     skills TEXT[],
-    salary NUMERIC,                  -- optional (salary/budget)
-    experience_level VARCHAR(100),   -- optional
-    url TEXT UNIQUE,                 -- unique URL for the job post
+    salary NUMERIC,                  
+    experience_level VARCHAR(100),   
+    url TEXT UNIQUE,                 
     created_at TIMESTAMP DEFAULT NOW()
 
 );
 
 
 
-SELECT * FROM jobs;
+
 
 
 
