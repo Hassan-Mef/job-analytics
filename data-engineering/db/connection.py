@@ -1,31 +1,12 @@
-import psycopg2
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-DB_Name = os.getenv('DB_NAME')
-DB_User = os.getenv('DB_USER')
-DB_Password = os.getenv('DB_PASSWORD')
-DB_Host = os.getenv('DB_HOST', 'localhost')
-DB_Port = os.getenv('DB_PORT', '5432')
+from db_utils import get_connection
 
 try:
-    # Connect
-    conn = psycopg2.connect(
-        dbname=DB_Name,
-        user=DB_User,
-        password=DB_Password,
-        host=DB_Host,
-        port=DB_Port
-    )
+    conn = get_connection()
     cur = conn.cursor()
 
-    # Run query
     cur.execute("SELECT * FROM jobs;")
     rows = cur.fetchall()
 
-    # Print results
     for row in rows:
         print(row)
 
