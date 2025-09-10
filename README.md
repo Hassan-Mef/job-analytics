@@ -5,6 +5,6 @@ This project is a Job Market Analytics and Recommendation Platform that collects
 
 ## Dev Branch Details 
 
-|- main 
-|- Dev
+|- main <br/>
+|- Dev <br/>
 |-|- feature/data-engineering 
